@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Matt S",
+    "teams": ["Argentina", "Croatia", "Morocco", "Canada", "Algeria", "Panama", "Cape Verde"]
+  },
+  {
+    "name": "Matt J",
+    "teams": ["France", "Belgium", "Japan", "Turkey", "Australia", "Jordan", "Haiti"]
+  },
+  {
+    "name": "Chris",
+    "teams": ["Brazil", "Uruguay", "Switzerland", "Sweden", "Ivory Coast", "Iran", "Curacao"]
+  },
+  {
+    "name": "Luke",
+    "teams": ["Spain", "Colombia", "Norway", "South Korea", "Tunisia", "Qatar", "New Zealand"]
+  },
+  {
+    "name": "Higgins",
+    "teams": ["England", "Netherlands", "Senegal", "Egypt", "Bosnia", "South Africa", "Uzbekistan"]
+  },
+  {
+    "name": "Danny",
+    "teams": ["Germany", "United States", "Austria", "Ghana", "Saudi Arabia", "DR Congo"]
+  },
+  {
+    "name": "Sam",
+    "teams": ["Portugal", "Mexico", "Ecuador", "Paraguay", "Czech Republic", "Scotland", "Iraq"]
+  }
+]

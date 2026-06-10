@@ -1,0 +1,200 @@
+:root {
+    --bg-primary: #0B0C10;
+    --bg-secondary: #1F2833;
+    --accent: #66FCF1;
+    --accent-dark: #45A29E;
+    --text-primary: #FFFFFF;
+    --text-secondary: #C5C6C7;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+}
+
+.orb-1 {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, var(--accent-dark) 0%, transparent 70%);
+}
+
+.orb-2 {
+    bottom: -20%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, var(--bg-secondary) 0%, transparent 70%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--accent), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent-dark);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+.total-points {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    background: var(--bg-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+
+.card.leader {
+    border-color: gold;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.team-list {
+    list-style: none;
+}
+
+.team-item {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.team-item:last-child {
+    border-bottom: none;
+}
+
+.team-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.team-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-points {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    grid-column: 1 / -1;
+    padding: 3rem;
+}
+
+/* Match info styling for future/basic integration */
+.match-info {
+    font-size: 0.8rem;
+    color: var(--accent-dark);
+    margin-top: 0.2rem;
+    display: block;
+}
+
+.winner-badge {
+    color: #ffd700;
+    font-weight: 800;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.eliminated-badge {
+    color: #ff4c4c;
+    font-weight: 600;
+}
